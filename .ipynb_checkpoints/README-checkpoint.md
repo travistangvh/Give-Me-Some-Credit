@@ -26,7 +26,7 @@ Precision Recall Curve (which is good for when cases are imbalanced)
 # What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
 From the feature importance curve, we see that revolving utilization of unsecured lines has the highest feature importance. The closer a person is to hitting their credit limit, the more likely they are to be delinquent.
 
-![alt text](reports/figures/feature importance.png)
+![alt text](reports/figures/feature-importance.png)
 
 We can also use LIME to explain the prediction of a single point. For instance, the model predicted that there is a 53% chance that this person will not default because their score on the NumberOfTimes90DaysLate is lower than average, among other features.
 
