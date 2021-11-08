@@ -7,12 +7,12 @@ Model validation is done by selecting the model with the highest AUC. Quite simp
 # What is the AUC? 
 AUC is the area under the ROC (Receiver Operating Curve). It is a graph of true positive rate against the false positive rate. It shows the performance of the classification model across all classification thresholds. 
 
-!(/reports/figures/roc.png)
+![alt text](reports/figures/roc.png)
 
 ROC AUC is the probability that the model ranks a random positive example more highly than a random negative example. 
 
 It might not be desirable when
-- The desired output needs to be well-calibrated. [Sources [1](https://sinyi-chou.github.io/classification-auc/) [2](https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc) [3](https://www.youtube.com/watch?v=RXMu96RJj_s)
+- The desired output needs to be well-calibrated. [Sources: [1](https://sinyi-chou.github.io/classification-auc/) [2](https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc) [3](https://www.youtube.com/watch?v=RXMu96RJj_s)]
 - The data is heavily imbalanced. [4](https://stats.stackexchange.com/questions/262616/roc-vs-precision-recall-curves-on-imbalanced-dataset)
 
 # Why is this chosen as an evaluation metric for this competition?
@@ -26,11 +26,11 @@ Precision Recall Curve (which is good for when cases are imbalanced)
 # What insight(s) do you have from your model? What is your preliminary analysis of the given dataset?
 From the feature importance curve, we see that revolving utilization of unsecured lines has the highest feature importance. The closer a person is to hitting their credit limit, the more likely they are to be delinquent.
 
-!(/reports/figures/feature importance.png)
+![alt text](reports/figures/feature importance.png)
 
 We can also use LIME to explain the prediction of a single point. For instance, the model predicted that there is a 53% chance that this person will not default because their score on the NumberOfTimes90DaysLate is lower than average, among other features.
 
-!(/reports/figures/lime.png)
+![alt text](reports/figures/lime.png)
 
 ## Can you get into the top 100 of the private leaderboard, or even higher?
 Unfortunately, no. We could try some Auto-ML tools for parameter tuning and more feature engineering for that.
